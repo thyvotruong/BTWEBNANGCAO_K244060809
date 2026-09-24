@@ -1,0 +1,30 @@
+<p>catalog works!</p>
+<h2>Bài 14 - Json Array Model - Product - Catalog</h2>
+<div *ngFor="let c of categories" style="margin-bottom: 20px;">
+    <table border="1" cellpadding="8" width="100%">
+        <tr style="background-color: #f2f2f2;">
+            <td><b>Ma Danh Muc:</b> {{c.CateId}}</td>
+            <td><b>Ten Danh Muc:</b> {{c.CateName}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table border="1" cellpadding="6" width="100%">
+                    <tr>
+                        <th>Ma San Pham</th>
+                        <th>Ten San Pham</th>
+                        <th>Gia San Pham</th>
+                        <th>Picture</th>
+                    </tr>
+                    <tr *ngFor="let p of c.Products">
+                        <td>{{p.ProductId}}</td>
+                        <td>{{p.ProductName}}</td>
+                        <td>{{p.Price}}</td>
+                        <td>
+                            <img [src]="p.Image" width="50">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
