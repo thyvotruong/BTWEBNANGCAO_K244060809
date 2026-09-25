@@ -1,0 +1,39 @@
+<div class="container mt-3">
+  <h2 class="text-center mb-3">Bài 18 - Json Array Model – Group Customers</h2>
+  
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <!-- Thêm border="1" và style border-collapse để hiển thị khung kẻ ô giống bài mẫu -->
+  <table border="1" cellspacing="0" cellpadding="8" style="width: 100%; border-collapse: collapse; margin-top: 15px;" *ngIf="customerGroups && customerGroups.length > 0">
+    <thead>
+      <tr style="background-color: #f2f2f2; text-align: center; font-weight: bold;">
+        <th style="padding: 8px; border: 1px solid black;">Id</th>
+        <th style="padding: 8px; border: 1px solid black;">Name</th>
+        <th style="padding: 8px; border: 1px solid black;">Email</th>
+        <th style="padding: 8px; border: 1px solid black;">Age</th>
+        <th style="padding: 8px; border: 1px solid black;">#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Lặp qua từng nhóm khách hàng -->
+      <ng-container *ngFor="let group of customerGroups">
+        <!-- Dòng tiêu đề nhóm -->
+        <tr style="background-color: #e9ecef; font-weight: bold;">
+          <td colspan="5" style="padding: 8px; border: 1px solid black;">
+            {{ group.CustomerTypeId }} - {{ group.CustomterTypeName }}
+          </td>
+        </tr>
+        <!-- Lặp qua danh sách khách hàng trong nhóm -->
+        <tr *ngFor="let cus of group.Customers">
+          <td style="padding: 8px; border: 1px solid black; vertical-align: middle;">{{ cus.Id }}</td>
+          <td style="padding: 8px; border: 1px solid black; vertical-align: middle;">{{ cus.Name }}</td>
+          <td style="padding: 8px; border: 1px solid black; vertical-align: middle;">{{ cus.Email }}</td>
+          <td style="padding: 8px; border: 1px solid black; text-align: center; vertical-align: middle;">{{ cus.Age }}</td>
+          <td style="padding: 8px; border: 1px solid black; text-align: center; vertical-align: middle;">
+            <img [src]="cus.Image" [alt]="cus.Name" width="70" height="70" style="object-fit: cover; border-radius: 4px;" />
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

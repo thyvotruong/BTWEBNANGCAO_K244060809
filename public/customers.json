@@ -1,0 +1,49 @@
+[
+  {
+    "CustomerTypeId": 1,
+    "CustomterTypeName": "VIP",
+    "Customers": [
+      {
+        "Id": "Cus123",
+        "Name": "Obama",
+        "Email": "obama@gmail.com",
+        "Age": 67,
+        "Image": "https://tile.loc.gov/storage-services/service/pnp/ppbd/00600/00603v.jpg#h=1024&w=820"
+      },
+      {
+        "Id": "Cus456",
+        "Name": "Kim jong Un",
+        "Email": "unun@gmail.com",
+        "Age": 38,
+        "Image": "https://c0.uidownload.com/pngpics/1554/813/kim-jong-un-portrait-north-korean-leader-workers-party-of-korea-kim-jong-un-smiling-asian-political-figure-formal-attire-headshot-graphy.png"
+      },
+      {
+        "Id": "Cus789",
+        "Name": "Putin",
+        "Email": "putin@gmail.com",
+        "Age": 77,
+        "Image": "https://assets.euromoneydigital.com/dims4/default/eef49f2/2147483647/strip/true/crop/800x1088+0+0/resize/800x1088!/quality/90/?url=http%3A%2F%2Feuromoney-brightspot.s3.amazonaws.com%2F22%2F99%2F30ff3040430aab0538dda48d7e34%2Fvladimir-putin.jpg"
+      }
+    ]
+  },
+  {
+    "CustomerTypeId": 2,
+    "CustomterTypeName": "Normal",
+    "Customers": [
+      {
+        "Id": "Cus000",
+        "Name": "Hồ Cẩm Đào",
+        "Email": "hodao@gmail.com",
+        "Age": 16,
+        "Image": "https://tse4.mm.bing.net/th/id/OIP.qDhoWuMZfNkYDDGteDIhVgHaI4?r=0&pid=Api&h=220&P=0"
+      },
+      {
+        "Id": "Cus111",
+        "Name": "Tap Can Binh",
+        "Email": "binhbinh@gmail.com",
+        "Age": 67,
+        "Image": "https://cdn.img.kevesko.vn/img/07e9/09/02/38051338_523:0:2571:2048_1920x0_80_0_0_ee04d34af2550bd15047c5cc190b77a3.jpg"
+      }
+    ]
+  }
+]
