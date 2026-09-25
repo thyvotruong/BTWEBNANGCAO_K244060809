@@ -1,1 +1,23 @@
 <p>service-product-image-event-detail works!</p>
+<div class="container mt-4" style="max-width: 400px; border: 1px solid #000; padding: 20px;">
+  <!-- Nút Go Back -->
+  <div class="mb-3">
+    <button class="btn btn-light border" (click)="goBack()">Go Back</button>
+  </div>
+
+  <!-- Hiển thị chi tiết sản phẩm nếu tìm thấy -->
+  <div *ngIf="selectedProduct">
+    <p><strong>ID:</strong> {{ selectedProduct.ProductId }}</p>
+    <p><strong>Name:</strong> {{ selectedProduct.ProductName }}</p>
+    <p><strong>Price:</strong> {{ selectedProduct.Price }}</p>
+    
+    <div class="text-center mt-3">
+      <img [src]="selectedProduct.Image" [alt]="selectedProduct.ProductName" style="max-width: 100%; height: 200px; object-fit: contain;" />
+    </div>
+  </div>
+
+  <!-- Thông báo nếu không tìm thấy sản phẩm -->
+  <div *ngIf="!selectedProduct" class="alert alert-warning">
+    Không tìm thấy thông tin sản phẩm!
+  </div>
+</div>
